@@ -1,1 +1,4 @@
 *.shf
+*.cgns
+*.xgrid
+/**configfullhull_RUN_DIR
