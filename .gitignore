@@ -2,3 +2,4 @@
 *.cgns
 *.xgrid
 /**configfullhull_RUN_DIR
+.gitignore~
