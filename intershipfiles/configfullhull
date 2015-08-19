@@ -1,0 +1,39 @@
+xflo
+  titl(titl="Run1")
+  prog(xgrid, xchap)
+  vship( vm_s =[3], reflen = 36.02)
+  hull(mono)
+  offs(file="rans_off.shf",lpp=36.02,xaxd=-1,ysig=1,zori=1.4,xori=36.02)
+  opti(on)
+  prtopt(xyplot,fsres, strlres)
+end
+xmes
+  body(grno=1,high,offs="hull",stat=60,poin=20,expa=5,str1=0,df1=0,dl1=0,str2=5,df2=0.001,dl2=0.001,str3=0,df3=0,dl3=0,str4=5,df4=0.001,dl4=0.001)
+ free(grno=2,poin=45,str1=5,df1=0.040,dl1=0.04,nbd2=1,ibd2=[1],y4si=-1.5,xste=1.01, xdow=2.37, stau=21, stru=1, dlu=0.01, dfu=0, stam=81, strm=5, dfm=0.01, dlm=0.01, stad= 81,strd=2,dfd=0.02)
+end
+xpan
+  cont(save,free,nonl)
+  iter(maxi=100)
+  para(nthr=4)
+end
+xbound
+  cont(save)
+end
+xgrid
+  offset(h1gr="hull")
+  sing(bow, xyzfwd = [35.66507, 0, 0.15126])
+  sing(keel, xyzfwd = [0.12307, 0, 0])
+  size( etamax=59, zetamax=71)
+  xdistr(xstart=-0.8, xend=1.8, xfpu=-0.05, xfpd=0.225, xapu=0.88, xapd=0.99)
+  xdistr(nu=32, nm=92, nf=78, na=32, nw=35)
+  yplus(ytarget=0.83)
+end
+xchap
+  paral ( nproc=4)
+  cont ( start, adi, maxit=5000)
+end
+
+xpos
+  cont(off)
+end
+ 
