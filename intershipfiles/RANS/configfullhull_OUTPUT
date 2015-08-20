@@ -1,0 +1,361 @@
+========================================================================
+ SSS   H  H  III  PPPP   FFFF  L     OO   W     W        SHIPFLOW-XFLOW
+S      H  H   I   P   P  F     L    O  O  W     W                       
+ SSS   HHHH   I   PPPP   FFF   L    O  O  W     W        VERSION 6.0.03
+    S  H  H   I   P      F     L    O  O   W W W
+ SSS   H  H  III  P      F     LLLL  OO     W W  2015-08-19 AT  11:25:00
+========================================================================
+
+************************************************************************
+*  THIS SOFTWARE IS A LICENSED PRODUCT OF FLOWTECH INTERNATIONAL AB,   *
+*  AND MAY ONLY BE USED ACCORDING TO THE TERMS OF THAT LICENSE ON THE  *
+*  SYSTEM IDENTIFIED IN THE LICENSE AGREEMENT. COPYRIGHT (C) 1990 BY   *
+*  FLOWTECH INTERNATIONAL AB. ALL RIGHTS RESERVED.                     *
+************************************************************************
+Licensed under the SHIPFLOW EDUCATIONAL LICENSE AGREEMENT
+--- To be used only in academic education ---
+
+ Revision:  Revision: 10428                                                
+  
+
+
+ - COMMANDS AND KEYWORDS FOR XFLOW 
+   Both input and default values are printed
+
+
+ - TITLE
+
+   titl  =  Run1                                                        
+
+
+ - POST PROCESSOR
+
+   Default post-processor SHIPFLOW is used.
+
+
+ - PROGRAM
+
+   xgri
+
+
+ - HULLTYPE
+
+   mono
+   xmma
+   trxd
+   xwlp  =   6.00000E-01
+
+
+ - OFFSETFILE
+
+   file  =  ../rans_off.shf
+   lpp   =   3.60200E+01
+   xori  =   3.60200E+01
+   yori  =   0.00000E+00
+   zori  =   1.40000E+00
+   ztem  =   0.00000E+00
+   ztop  =   0.00000E+00
+   ffwd  =   0.00000E+00
+   faft  =   0.00000E+00
+   xaxd  =  -1.00000E+00
+   ysig  =   1.00000E+00
+   itte  =    4
+
+
+ - IPOSITION
+
+   roll  =   0.00000E+00
+   trim  =   0.00000E+00
+   xcof  =   5.00000E-01
+   zvcg  =   0.00000E+00
+
+
+ - OSFLOW
+
+   numb  =    1
+   flow  =   0.00000E+00
+
+
+ - VSHIP
+
+   numb  =    1
+   fn    =   1.59621E-01
+   rn    =   1.07629E+08
+
+
+ - SYMMETRY
+
+   xzpl
+
+
+ - FLUID
+
+   dens  =   1.00000E+03
+   grav  =   9.80665E+00
+   visc  =   1.00400E-06
+
+
+ - PRTOPT
+
+   fsre
+   strl
+   xypl
+   last
+
+
+========================================================================
+X   X       GGG   RRRR   III  DDDD                       SHIPFLOW-XGRID
+ X X       G      R   R   I   D   D
+  X    --  G GGG  RRRR    I   D   D                      VERSION 6.0.03
+ X X       G   G  R  R    I   D   D
+X   X       GGG   R   R  III  DDDD               2015-08-19 AT  11:25:00
+========================================================================
+Licensed under the SHIPFLOW EDUCATIONAL LICENSE AGREEMENT
+--- To be used only in academic education ---
+
+
+
+ - Coordinate transformation
+
+   Sinkage and trim cannot be taken from the XPDB-file,
+   since it doesn't exist.
+
+   sinkage :   0.0000    
+   trim    :   0.000 +   0.000   (initial + correction)
+   xcof    :   0.500
+
+
+ - COMMANDS AND KEYWORDS FOR XGRID 
+   Both input and default values are printed
+
+
+ - OUTPUT
+
+   This card was not found.
+   Default output will be used:
+   Interpolated grid -> XVGRID-file
+   Coarse grid -> XGPOST-file
+   Iteration history turned off
+
+
+ - OFFSET
+
+   h1gr  =  hull
+
+
+ - SIZE
+
+   ksim  =  120              (default)
+   etam  =   59
+   aeta  =    0              (default)
+   ueta  =    0              (default)
+   zeta  =   71
+   jmxp  =    0              (default)
+   kmxp  =    0              (default)
+   jmxf  =    0              (default)
+
+
+ - COARSE
+
+   This card was not found.
+   ksic  =  118.0            (default)
+   zeta  =   71.0            (default)
+   fatt  =   1.00000E+00     (default)
+
+
+ - XDISTR
+
+   xsta  =   5.00000E-01     (default)
+   NM    =   52              (default)
+   xapu  =   8.80000E-01     (default)
+   NA    =   32
+   xapd  =   9.90000E-01     (default)
+   NW    =   35
+   NT    =    0              (default)
+   xend  =   1.80000E+00     (default)
+   habo  =   0.00000E+00     (default)
+   hund  =   0.00000E+00     (default)
+
+
+ - RADIUS
+
+   This card was not found.
+
+   radi  =   3.00000E+00     (default)
+   cent  =   0.00000E+00     (default)
+   rsti  =   0.00000E+00     (default)
+
+
+ - YPLUS
+
+   No wall laws assumed
+   ytar  =   8.30000E-01     (default)
+   yexp  =   1.00000E+00     (default)
+
+
+ - SKIN
+
+   The "skin" thickness at the keel is defined by:
+
+             x         thickness
+
+       0.90000       2.53942E-07
+        1.2000       2.53942E-07
+
+   The "skin" thickness at the waterline is defined by:
+
+             x         thickness
+
+       0.90000       2.53942E-07
+        1.0000       2.53942E-07
+
+
+ - SINGUL
+
+   The following definition of the keel singularity line was found:
+      xyzfwd      :  0.12307         0.0000         0.0000    
+      xyzaft      :  -7.0809         0.0000         0.0000    
+
+   The singul(water) card was not found.
+   The default line that follows the centre of the grid will be used.
+
+
+ - ETASMOOTH
+
+   This card was not found.
+   The eta-boundary smoothing has been turned off.
+
+   time  =   1.00000E+00     (default)
+   zeta  =   14.0            (default)
+
+
+ - POISSON
+
+   This card was not found.
+   The poisson solver has been turned on.
+
+   maxi  =   60              (default)
+   ycri  =   1.00000E-09     (default)
+   zcri  =   1.00000E-09     (default)
+   orfy  =   1.00000E+00     (default)
+   orfz  =   1.00000E+00     (default)
+   The poisson solver freezing has been turned off.
+   jufr  =    0              (default)
+   jafr  =    0              (default)
+   angf  =   2.50000E+01     (default)
+
+
+ - NEUMANN
+
+   This card was not found.
+   The Neumann b.c. at the eta-boundaries has been turned off.
+
+   neuw  =   20              (default)
+   neuh  =    1              (default)
+   neum  =   40              (default)
+
+
+ - IMPROVE
+
+   This card was not found.
+
+   impw  =    4              (default)
+   imph  =    1              (default)
+   impm  =   40              (default)
+   angs  =   1.00000E-03     (default)
+   conf  =   28.0            (default)
+
+
+ - FEEDBACK
+
+   No feedback card was found, default values will be used.
+
+
+---END OF ECHO
+
+
+ - Estimated memory requirements for XGRID
+
+   memory in integer words          :     8224766
+   available memory ( SHIPFLOWMEM ) :   200000000
+
+
+ - Estimated memory requirements for XGRID
+
+   memory in integer words          :    24962126
+   available memory ( SHIPFLOWMEM ) :   200000000
+
+
+ - Poisson solver iteration history:
+
+              max change     max change 
+      iter.      of y           of z    
+
+         1    7.17880E-03    6.72025E-03
+         2    4.37651E-03    4.80216E-03
+         3    3.48445E-03    3.49255E-03
+         4    2.91080E-03    2.82187E-03
+         5    1.32887E-03    1.50909E-03
+         6    3.52594E-03    2.94510E-03
+         7    4.60019E-03    3.69599E-03
+         8    4.84443E-03    4.19745E-03
+         9    4.85039E-03    4.31968E-03
+        10    4.72933E-03    4.38412E-03
+        11    4.55629E-03    4.34348E-03
+        12    4.36608E-03    4.20379E-03
+        13    4.20415E-03    4.08909E-03
+        14    4.01409E-03    4.00691E-03
+        15    3.79754E-03    3.92120E-03
+        16    3.56396E-03    3.82624E-03
+        17    3.33019E-03    3.72094E-03
+        18    3.08674E-03    3.62827E-03
+        19    2.85959E-03    3.54246E-03
+        20    2.64519E-03    3.45166E-03
+        21    2.43019E-03    3.35814E-03
+        22    2.26038E-03    3.26361E-03
+        23    2.12114E-03    3.17017E-03
+        24    2.08462E-03    3.09298E-03
+        25    2.14941E-03    3.01691E-03
+        26    2.11596E-03    2.94314E-03
+        27    2.07580E-03    2.86919E-03
+        28    1.96225E-03    2.79466E-03
+        29    1.89903E-03    2.71910E-03
+        30    1.79064E-03    2.64547E-03
+        31    1.66563E-03    2.57677E-03
+        32    1.54159E-03    2.50507E-03
+        33    1.41896E-03    2.43041E-03
+        34    1.32101E-03    2.35563E-03
+        35    1.30329E-03    2.28467E-03
+        36    1.28742E-03    2.21301E-03
+        37    1.26748E-03    2.13975E-03
+        38    1.24528E-03    2.07374E-03
+        39    1.21815E-03    2.00712E-03
+        40    1.18767E-03    1.93971E-03
+        41    1.16001E-03    1.87406E-03
+        42    1.13819E-03    1.80832E-03
+        43    1.14536E-03    1.74332E-03
+        44    1.13838E-03    1.68297E-03
+        45    1.09572E-03    1.65909E-03
+        46    1.06401E-03    1.63616E-03
+        47    1.05220E-03    1.61414E-03
+        48    1.03991E-03    1.59220E-03
+        49    1.03004E-03    1.57041E-03
+        50    1.02003E-03    1.54884E-03
+        51    1.00979E-03    1.52860E-03
+        52    9.99383E-04    1.50865E-03
+        53    9.88863E-04    1.48898E-03
+        54    9.78274E-04    1.46963E-03
+        55    9.67659E-04    1.45065E-03
+        56    9.57806E-04    1.43208E-03
+        57    9.52217E-04    1.42131E-03
+        58    9.50064E-04    1.41494E-03
+        59    9.48488E-04    1.40835E-03
+        60    9.47430E-04    1.40217E-03
+
+
+ - Maximum number  60 ( = maxit) iterations reached.
+
+
+SHIPFLOW started: 2015-08-19 at 11:24:59, ended: 2015-08-19 at 11:25:03
+
+

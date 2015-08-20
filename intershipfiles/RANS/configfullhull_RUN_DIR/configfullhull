@@ -1,0 +1,39 @@
+xflo
+  titl(titl="Run1")
+  prog(xgri)
+  vshi(rn=[1.076294820717131e08],fn=[0.159620645478835])
+  hull(mono)
+  offs(file="../rans_off.shf",lpp=36.02,xaxd=-1,ysig=1,zori=1.4,xori=36.02)
+  opti(on)
+  prto(xypl,fsre,strl)
+  control(exepath="c:\FLOWTECH\SHIPFLOW6.0.03-x86_64\bin\..\\bin/",runid="configfullhull_RUN_DIR",rundir="d:\GitHub\ShipFlow\intershipfiles\RANS\configfullhull_RUN_DIR",casedir="d:\GitHub\ShipFlow\intershipfiles\RANS")
+end
+xmes
+  body(grno=1,high,offs="hull",stat=60,poin=20,expa=5,str1=0,df1=0,dl1=0,str2=5,df2=0.001,dl2=0.001,str3=0,df3=0,dl3=0,str4=5,df4=0.001,dl4=0.001)
+  free(grno=2,poin=45,str1=5,df1=0.04,dl1=0.04,nbd2=1,ibd2=[1],y4si=-1.5,xste=1.01,xdow=2.37,stau=21,stru=1,dlu=0.01,dfu=0,stam=81,strm=5,dfm=0.01,dlm=0.01,stad=81,strd=2,dfd=0.02)
+end
+xpan
+  cont(save,free,nonl)
+  iter(maxi=100)
+  para(nthr=4)
+end
+xbou
+  cont(save)
+end
+xgri
+  offs(h1gr="hull")
+  sing(bow,xyzf=[35.66507, 0.0, 0.15126])
+  sing(keel,xyzf=[0.12307, 0.0, 0.0])
+  size(etam=59,zeta=71)
+  xdis(xsta=0.5,xend=1.8,xfpu=-0.05,xapu=0.88,xapd=0.99)
+  xdis(nm=52,na=32,nw=35)
+  yplu(ytar=0.83)
+end
+xcha
+  para(npro=4)
+  cont(star,adi,maxi=30)
+  vof(z0=0)
+end
+xpos
+  cont(off)
+end

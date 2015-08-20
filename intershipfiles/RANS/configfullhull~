@@ -2,7 +2,7 @@ xflo
   titl(titl="Run1")
   prog(xgri)
   vship( vm_s =[3], reflen = 36.02)
-  hull(mono)
+  hull(mono, vof)
   offs(file="rans_off.shf",lpp=36.02,xaxd=-1,ysig=1,zori=1.4,xori=36.02)
   opti(on)
   prtopt(xyplot,fsres, strlres)
@@ -35,7 +35,6 @@ end
 xchap
   paral ( nproc=4)
   cont ( start, adi, maxit=30)
-  vof(z0=0)
 end
 
 xpos
